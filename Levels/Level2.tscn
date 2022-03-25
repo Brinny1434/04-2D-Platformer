@@ -1,0 +1,248 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Assets/tile_crate.png" type="Texture" id=1]
+[ext_resource path="res://Assets/tile_grass.png" type="Texture" id=2]
+[ext_resource path="res://Assets/tile_diagonal.png" type="Texture" id=3]
+[ext_resource path="res://Assets/ui_box.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Enemy2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Player_Container.gd" type="Script" id=6]
+[ext_resource path="res://Enemies/Enemies.gd" type="Script" id=7]
+[ext_resource path="res://Camera.gd" type="Script" id=8]
+[ext_resource path="res://Assets/tile_column.png" type="Texture" id=9]
+[ext_resource path="res://Assets/tile_brick.png" type="Texture" id=10]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Coins/Coin.tscn" type="PackedScene" id=12]
+
+[sub_resource type="NavigationPolygon" id=8]
+vertices = PoolVector2Array( 1408, 776, 3136, 768, 3328, 768, 2944, 832, 2752, 832, 1216, 960, 2752, 896, 2944, 896, 1600, 960, 3328, 704, 3136, 704, 2496, 640, 1920, 576, 1920, 512, 2112, 256, 3328, -192, 1984, 256, 2112, 192, 64, -192, 1984, 192, 3072, 960, 3008, 960, 1216, 896, 1336, 776, 1408, 704, 2240, 704, 2496, 704, 2240, 640, 704, 640, 1664, 576, 704, 576, 1664, 512, 3328, 1088, 3136, 1088, 3136, 1024, 3072, 1024, 3008, 1024, 2944, 1024, 2944, 1088, 1728, 1088, 1728, 1024, 1664, 960, 1664, 1024, 1600, 1024, 1536, 1024, 1536, 1088, 576, 1088, 384, 1064, 384, 1088, 64, 1088, 64, 832, 320, 832, 320, 768, 64, 768, 512, 576, 512, 640, 960, 896, 1336, 704, 448, 1024, 960, 960, 384, 1024 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12, 13, 14, 15 ), PoolIntArray( 16, 14, 13 ), PoolIntArray( 15, 14, 17 ), PoolIntArray( 18, 15, 17, 19 ), PoolIntArray( 7, 3, 2, 20, 21 ), PoolIntArray( 0, 4, 6, 5, 22, 23 ), PoolIntArray( 1, 0, 24, 25 ), PoolIntArray( 26, 11, 10, 1 ), PoolIntArray( 12, 11, 27 ), PoolIntArray( 28, 29, 12, 27, 25, 24 ), PoolIntArray( 29, 28, 30, 31 ), PoolIntArray( 2, 32, 33, 34 ), PoolIntArray( 34, 35, 20, 2 ), PoolIntArray( 21, 36, 37, 7 ), PoolIntArray( 37, 38, 39, 40 ), PoolIntArray( 7, 37, 40, 41 ), PoolIntArray( 40, 42, 41 ), PoolIntArray( 8, 43, 44 ), PoolIntArray( 44, 45, 46 ), PoolIntArray( 47, 48, 49, 50, 51 ), PoolIntArray( 52, 53, 18, 54, 55 ), PoolIntArray( 18, 19, 16, 13, 31 ), PoolIntArray( 18, 31, 30, 54 ), PoolIntArray( 22, 56, 51, 52, 55, 28, 57, 23 ), PoolIntArray( 8, 44, 46, 58 ), PoolIntArray( 25, 26, 1 ), PoolIntArray( 28, 24, 57 ), PoolIntArray( 51, 56, 59, 60 ), PoolIntArray( 8, 58, 60, 5 ), PoolIntArray( 7, 41, 8 ), PoolIntArray( 59, 5, 60 ), PoolIntArray( 47, 51, 60 ), PoolIntArray( 47, 60, 47 ) ]
+outlines = [ PoolVector2Array( 64, -192, 64, 768, 320, 768, 320, 832, 64, 832, 64, 1088, 384, 1088, 384, 1064, 384, 1064, 384, 1024, 448, 1024, 576, 1088, 1536, 1088, 1536, 1024, 1600, 1024, 1600, 960, 1664, 960, 1664, 1024, 1728, 1024, 1728, 1088, 2944, 1088, 2944, 1024, 3008, 1024, 3008, 960, 3072, 960, 3072, 1024, 3136, 1024, 3136, 1088, 3328, 1088, 3328, 768, 3136, 768, 3136, 704, 3328, 704, 3328, -192 ), PoolVector2Array( 960, 896, 960, 960, 1216, 960, 1216, 896 ), PoolVector2Array( 1664, 512, 1664, 576, 1920, 576, 1920, 512 ), PoolVector2Array( 2240, 640, 2240, 704, 2496, 704, 2496, 640 ), PoolVector2Array( 1984, 192, 1984, 256, 2112, 256, 2112, 192 ), PoolVector2Array( 2752, 832, 2752, 896, 2944, 896, 2944, 832 ), PoolVector2Array( 704, 576, 704, 640, 512, 640, 512, 576 ), PoolVector2Array( 1336, 704, 1336, 776, 1408, 776, 1408, 704 ), PoolVector2Array( 1536, 1016, 1536, 960, 1728, 960, 1728, 1088 ), PoolVector2Array( 320, 1080, 320, 960, 512, 960, 512, 1088, 640, 1088 ), PoolVector2Array( 2304, 960, 2304, 1024, 2368, 1024, 2368, 960 ), PoolVector2Array( 2368, 256, 2368, 320, 2432, 320, 2432, 384, 2496, 384, 2496, 320, 2560, 320, 2560, 256 ), PoolVector2Array( 3008, 512, 3008, 576, 3200, 576, 3200, 512 ), PoolVector2Array( 1088, 192, 1088, 384, 1152, 384, 1152, 192 ) ]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=7]
+0/name = "ui_box.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tile_grass.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tile_diagonal.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tile_crate.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "tile_column.png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "tile_brick.png 5"
+5/texture = ExtResource( 10 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 6 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+
+[node name="Game" type="Node2D"]
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 7 )
+collision_layer = 3
+format = 1
+tile_data = PoolIntArray( -65536, 5, 0, 0, 5, 0, 52, 5, 0, 65536, 5, 0, 65588, 5, 0, 131072, 5, 0, 131124, 5, 0, 196608, 5, 0, 196625, 3, 0, 196639, 3, 0, 196640, 3, 0, 196660, 5, 0, 262144, 5, 0, 262161, 3, 0, 262181, 3, 0, 262182, 3, 0, 262183, 3, 0, 262196, 5, 0, 327680, 5, 0, 327697, 3, 0, 327718, 3, 0, 327732, 5, 0, 393216, 5, 0, 393268, 5, 0, 458752, 5, 0, 458804, 5, 0, 524288, 5, 0, 524314, 3, 0, 524315, 3, 0, 524316, 3, 0, 524317, 3, 0, 524335, 3, 0, 524336, 3, 0, 524337, 3, 0, 524340, 5, 0, 589824, 5, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589876, 5, 0, 655360, 5, 0, 655395, 3, 0, 655396, 3, 0, 655397, 3, 0, 655398, 3, 0, 655412, 5, 0, 720896, 5, 0, 720917, 3, 0, 720945, 3, 0, 720946, 3, 0, 720947, 3, 0, 720948, 5, 0, 786432, 5, 0, 786433, 3, 0, 786434, 3, 0, 786435, 3, 0, 786436, 3, 0, 786484, 5, 0, 851968, 5, 0, 852011, 3, 0, 852012, 3, 0, 852013, 3, 0, 852020, 5, 0, 917504, 5, 0, 917519, 3, 0, 917520, 3, 0, 917521, 3, 0, 917522, 3, 0, 917556, 5, 0, 983040, 5, 0, 983045, 4, 0, 983046, 4, 0, 983047, 4, 0, 983064, 4, 0, 983065, 4, 0, 983066, 4, 0, 983076, 3, 0, 983087, 4, 0, 983092, 5, 0, 1048576, 5, 0, 1048581, 4, 0, 1048582, 4, 0, 1048583, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1048602, 4, 0, 1048622, 4, 0, 1048623, 4, 0, 1048624, 4, 0, 1048628, 5, 0, 1114112, 5, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 1, 0, 1114145, 1, 0, 1114146, 1, 0, 1114147, 1, 0, 1114148, 1, 0, 1114149, 1, 0, 1114150, 1, 0, 1114151, 1, 0, 1114152, 1, 0, 1114153, 1, 0, 1114154, 1, 0, 1114155, 1, 0, 1114156, 1, 0, 1114157, 1, 0, 1114158, 1, 0, 1114159, 1, 0, 1114160, 1, 0, 1114161, 1, 0, 1114162, 1, 0, 1114163, 1, 0, 1114164, 5, 0 )
+
+[node name="Player_Container" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Enemies" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 610, 1051 )
+constraint_left = Vector2( 610, 1051 )
+constraint_right = Vector2( 1505, 1051 )
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1729, 849 )
+constraint_left = Vector2( 1729, 849 )
+constraint_right = Vector2( 1729, 864 )
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 2266, 601 )
+constraint_left = Vector2( 2266, 601 )
+constraint_right = Vector2( 2458, 601 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 2008, 160 )
+constraint_left = Vector2( 2008, 160 )
+constraint_right = Vector2( 2096, 160 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 615, 539 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 1376, 664 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 1497, 388 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 2054, 1032 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 2068, 137 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 3231, 1046 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 3293, 1044 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 3174, 1046 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 3205, 998 )
+
+[node name="Coin10" parent="Coins" instance=ExtResource( 12 )]
+position = Vector2( 3257, 999 )
+
+[node name="Camera" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 3385
+limit_bottom = 1152
+script = ExtResource( 8 )
+
+[node name="UI" parent="." instance=ExtResource( 11 )]
